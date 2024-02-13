@@ -25,7 +25,7 @@ class App_Controller extends CI_Controller
 		$this->user = $this->db
 			->query("SELECT c.id, c.club_id, c.managed_by, c.club_name, c.email, c.country, c.city, c.is_verified, c.is_subscribed, c.verified_on, c.subscribed_on, c.verification_source, c.registered_at, c.refered_by, c.refered_by_type, upi.profile_image, upi.cover_image, upi.listing_image
 			FROM clubs c
-			LEFT JOIN user_profile_images upi ON c.id = upi.user_id AND upi.user_type = 'club'
+			LEFT JOIN user_profile_images upi ON c.id = upi.user_id AND upi.user_type = 'C'
 			WHERE c.auth_token = '$auth_cookie';
 			")
 			->row_array();
