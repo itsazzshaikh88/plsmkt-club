@@ -34,6 +34,9 @@ class App_Controller extends CI_Controller
 			return redirect(SITE_URL . "/login/club?force-logout=true");
 		// set user details
 		$this->userid = $this->user['id'];
+		$this->clubname = $this->user['club_name'];
+		// $this->userlastname = $this->user['last_name'];
+		$this->clubid = $this->user['club_id'];
 		$this->usertype = "club";
 	}
 }

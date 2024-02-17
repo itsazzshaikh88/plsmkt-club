@@ -189,8 +189,8 @@ a {
   margin: 12px 0;
 }
 .sidebar-activity h3 {
-  color: #777;
-  font-size: 14px;
+  color: #333;
+  font-size: 16px;
   font-weight: 500;
   margin: 20px 0 10px;
 }
@@ -229,6 +229,30 @@ a {
 .sidebar-news {
   background: #fff;
   padding: 10px 15px;
+  
+}
+.club{
+  width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.club-list {
+  background: #fff;
+  padding: 10px 15px;
+  width: 30%;
+  
+}
+.club-list h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0 30px;
+}
+.sidebar-sugg{
+  background: #fff;
+  padding: 10px 15px;
+  margin-top: 5%;
 }
 .info-icon {
   width: 15px;
@@ -241,9 +265,36 @@ a {
   color: #333;
   margin: 10px 0 30px;
 }
+/* .sidebar-activity h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0 30px;
+} */
+.sidebar-sugg h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0 30px;
+}
 .sidebar-news .news-box {
   border-left: 3px solid #bdf5de;
   padding: 0 5px;
+}
+.club-list .club-box {
+  border-left: 3px solid #bdf5de;
+  padding: 0 5px;
+  display: grid;
+  grid-template-columns: 2fr 9fr 3fr 2fr;
+    margin-bottom: 10px;
+}
+.club-header{
+  display: grid;
+  /* align-content: stretch; */
+  /* align-items: baseline; */
+  /* justify-items: stretch; */
+  grid-template-columns: 2fr 9fr 2fr 2fr;
+  padding-left: 11px;
 }
 .sidebar-news a {
   display: block;
@@ -267,11 +318,11 @@ a {
   margin: 12px 0;
   font-size: 12px;
 }
-.sidebar-ad img {
+/* .sidebar-ad img {
   width: 60px;
   border-radius: 50%;
   margin: 4px;
-}
+} */
 .sidebar-ad small {
   float: right;
   font-weight: 500;
@@ -316,17 +367,95 @@ a {
   margin-right: 4px;
 }
 
+
+/* Follow */
+
+.follow-btn {
+	background-color: #007bff; /* Button background color */
+	color: #fff; /* Button text color */
+	 /* Adjust padding as needed */
+	border: none;
+	border-radius: 5px; /* Optional: Add rounded corners */
+	cursor: pointer;
+	font-size: 14px;
+	height: 29px;
+	margin: 3%;
+}
+
+.follow-btn:hover {
+	background-color: #0056b3; /* Change color on ho\ver */
+	color: #fff; /* Change color on ho\ver */
+}
+
+.Cmain{
+	/* text-align: center; */
+	font-family: 'Arial', sans-serif;
+	 color: #333; 
+	 margin: 2px;
+	 display:flex ; 
+	 justify-content: space-between;
+
+	}
+	.Cmain img{
+		width: 38px; 
+		height: 36px; 
+		border-radius: 53%;
+	}
+	.Cmain h6{
+		margin: 13px; 
+		font-size: 1em;
+	}
+
+/* End Follow */
+/* .sidebar-activity a {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-size: 500;
+  color: #888;
+  margin: 3px 0;
+} */
+
+.mynetworklink{
+	transition: 0.5s;
+	padding: 2px 0;
+	margin: 0;
+}
+
+.mynetworklink:hover{
+	background-color:rgba(0,0,0,0.04);
+	font-weight: bold;
+}
+.active_profile {
+  background-color: rgba(0,0,0,0.10);
+  font-weight: bold;
+  border-left: 4px solid #01d099;
+  padding-left: 5px;
+}
 /* -----------main-content------------ */
 .main-content {
   flex-basis: 47%;
 }
+.main-content-add-post {
+  flex-basis: 47%;
+}
 .create-post {
   background: #fff;
+  /* display: flex; */
+    justify-content: center;
 }
 .create-post-input {
   padding: 20px 25px 10px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+}
+.sidebar-heading{
+  font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0 30px;
+    text-align: start;
+    padding: 0px 13px;
 }
 .create-post-input img {
   width: 35px;
@@ -335,8 +464,8 @@ a {
 }
 .create-post-input textarea {
   width: 100%;
-  border: 0;
-  outline: 0;
+  border: 1px solid #3333;
+    outline: 0;
   resize: none;
   background: transparent;
   margin: 8px;
@@ -344,10 +473,10 @@ a {
 ::placeholder {
   font-weight: 500;
 }
-.create-post-links {
+.create-post-links{
   display: flex;
-  align-items: flex-start;
 }
+
 .create-post-links li {
   list-style: none;
   border-top: 1px solid #ccc;
@@ -365,11 +494,18 @@ a {
   margin-right: 5px;
 }
 .create-post-links li:last-child {
-  background: #01d099;
-  color: #fff;
+  background: #fff;
+  color: #333;
   border-top: 0;
   border-right: 0;
 }
+.add-post{
+  display: flex;
+  justify-content: center;
+  margin-top: 25%;
+
+}
+
 .sort-by {
   display: flex;
   align-items: center;
@@ -761,6 +897,9 @@ profile-container-inner {
   .main-content {
     flex-basis: 100%;
   }
+  .main-content-add-post {
+    flex-basis: 100%;
+  }
   .post-stats div {
     margin: 2px 0;
   }
@@ -798,3 +937,5 @@ profile-container-inner {
     display: block;
   }
 }
+
+

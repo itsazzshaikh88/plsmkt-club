@@ -25,3 +25,7 @@
 	<?php include '__navbar.php' ?>
 
 	<!-- --------navbar close----------- -->
+	
+	<div class="container-custom">
+		<!-- */_____ left-sidebar -->
+		<?php include '__left_sidebar.php' ?>	
